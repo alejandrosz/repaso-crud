@@ -1,0 +1,15 @@
+<div class="container coasters-index">
+
+  <h1 style="font-weight: 100">Editar {{name}}</h1>
+
+  <form action="/coasters/coaster-edit/{{_id}}" method="POST">
+    <label for="name">Nombre: </label><input type="text" name="name" value='{{name}}'>
+    <label for="description">Descripcion: </label><input type="text" name="picture" value={{description}}>
+    <label for="inversions">Inversion: </label><input type="text" name="inversions" value='{{inversions}}'>
+    <label for="length">Longitud: </label><input type="text" name="length" value='{{length}}'>
+    <label for="length">Nombre del parque: </label><input type="text" name="length" value='{{park.name}}'>
+    <button>Editar</button>
+    <a class="cancel" href="/coasters/{{_id}}">Cancelar edición</a>
+  </form>
+
+</div>

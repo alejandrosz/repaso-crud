@@ -2,6 +2,12 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
+const mongoose     = require('mongoose');
+
+const dbtitle = 'repaso-crud'
+mongoose.connect(`mongodb://localhost/${dbtitle}`, { useUnifiedTopology: true, useNewUrlParser: true })
+
+
 
 // DB, middlewares, locals & debug
 require('./configs/mongoose.config')
